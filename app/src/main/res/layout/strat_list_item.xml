@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             tools:context=".strat_list_item" android:background="@color/cardview_dark_background">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+            <TextView
+                    android:text="Stratname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" android:id="@+id/fragStratListItem_title"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:gravity="left|center_vertical" android:textStyle="bold"/>
+            <TextView
+                    android:text="Rolle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/fragStratListItem_role"
+                    android:gravity="right|center_vertical"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:gravity="center"
+                android:layout_margin="@dimen/activity_vertical_margin">
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" tools:src="@tools:sample/avatars"
+                    android:id="@+id/fragStratListItem_image1" android:layout_marginRight="10dp"/>
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" tools:src="@tools:sample/avatars"
+                    android:id="@+id/fragStratListItem_image2" android:layout_marginRight="10dp"/>
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" tools:src="@tools:sample/avatars"
+                    android:id="@+id/fragStratListItem_image3" android:layout_marginRight="10dp"/>
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" tools:src="@tools:sample/avatars"
+                    android:id="@+id/fragStratListItem_image4" android:layout_marginRight="10dp"
+            />
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" tools:src="@tools:sample/avatars"
+                    android:id="@+id/fragStratListItem_image5"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

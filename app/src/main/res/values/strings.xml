@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SODAPP</string>
+    <string name="willkommen_in_der_sod_app">Willkommen in der SoD-App!</string>
+    <string name="willkommen">Willkommen</string>
+    <string name="anmelden">Anmelden</string>
+    <string name="passwort">Passwort</string>
+    <string name="nutzername">Nutzername</string>
+    <string name="loading">Lädt...</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="tab_text_1">Strategien</string>
+    <string name="tab_text_2">Einstellungen</string>
+    <string name="image_of_map">Image of Map</string>
+    <string name="textview">TextView</string>
+    <string name="image_of_the_map">Image of the map.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
