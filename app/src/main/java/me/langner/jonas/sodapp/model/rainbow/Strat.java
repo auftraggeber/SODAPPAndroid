@@ -20,13 +20,25 @@ public class Strat {
      * @param name Der Name der Strat.
      * @param map Die Map der Strat.
      * @param role Die {@link me.langner.jonas.sodapp.model.rainbow.Operator.Role} der Strat.
+     * @param userOperator Der Operator, der vom Nutzer gespielt wird
      * @return Die gefundene oder neu erstellte Strat.
      */
-    public static Strat getStrat(int id, String name, GameMap map, Operator.Role role) {
-        if (strats.containsKey(id) && strats.get(id) != null)
+    public static Strat getStrat(int id, String name, GameMap map, Operator.Role role, Operator userOperator) {
+        if (stratExists(id))
             return strats.get(id);
 
-        return new Strat(id, name, map, role);
+        return new Strat(id, name, map, role, userOperator);
+    }
+
+    public static Strat getStrat(int id) {
+        if (stratExists(id))
+            return strats.get(id);
+
+        return null;
+    }
+
+    public static boolean stratExists(int id) {
+        return strats.containsKey(id) && strats.get(id) != null;
     }
 
     public static Collection<Strat> getStrats() {
@@ -37,6 +49,7 @@ public class Strat {
     private String name;
     private GameMap map;
     private Operator.Role role;
+    private Operator userOperator;
     private Map<Operator, List<String>> operators = new HashMap<>();
 
     /**
@@ -44,13 +57,15 @@ public class Strat {
      * @param id Die zugehörige ID.
      * @param name Der Name der Strat.
      * @param map Die Map der Strat.
+     * @param userOperator Der Operator, der vom Nutzer gespielt wird
      * @param role Die {@link me.langner.jonas.sodapp.model.rainbow.Operator.Role} der Strat.
      */
-    private Strat(int id, String name, GameMap map, Operator.Role role) {
+    private Strat(int id, String name, GameMap map, Operator.Role role, Operator userOperator) {
         this.id = id;
         this.name = name;
         this.map = map;
         this.role = role;
+        this.userOperator = userOperator;
 
         strats.put(id, this);
         map.addStrat(this);
@@ -103,6 +118,10 @@ public class Strat {
         operators.put(operator, users);
     }
 
+    public void setUserOperator(Operator userOperator) {
+        this.userOperator = userOperator;
+    }
+
     public int getId() {
         return id;
     }
@@ -129,5 +148,9 @@ public class Strat {
         }
 
         return new ArrayList<>();
+    }
+
+    public Operator getUserOperator() {
+        return userOperator;
     }
 }

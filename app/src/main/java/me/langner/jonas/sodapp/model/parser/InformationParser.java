@@ -232,7 +232,7 @@ public abstract class InformationParser extends SimpleXMLParser {
             }
 
             if (id > 0 && name != null && map != null && role != null) {
-                stratObject = Strat.getStrat(id, name, GameMap.getGameMap(map,null), role);
+                stratObject = Strat.getStrat(id, name, GameMap.getGameMap(map,null), role, null);
 
                 /* alle operatoren hinzufügen */
                 for (Operator operator : operators.keySet()) {

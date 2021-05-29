@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void example() {
-        Strat strat = Strat.getStrat(1,"TEST", GameMap.getGameMap("Bank", "https://sod.clan.rip/img/Bank.png"), Operator.Role.DEFENDER);
+        Strat strat = Strat.getStrat(1,"TEST", GameMap.getGameMap("Bank", "https://sod.clan.rip/img/Bank.png"), Operator.Role.DEFENDER, null);
         strat.addOperator(Operator.getOperator("Pulse", "https://sod.clan.rip/img/operator/Pulse.png"), new ArrayList<String>());
     }
 

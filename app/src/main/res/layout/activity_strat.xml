@@ -7,25 +7,82 @@
         android:layout_height="match_parent"
         tools:context=".ui.activity.StratActivity" android:background="@color/design_default_color_on_secondary">
 
-    <TextView
-            android:text="TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:id="@+id/actStrat_title"/>
-    <fragment
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" android:name="me.langner.jonas.sodapp.ui.fragment.UserOperatorFragment"
-            android:id="@+id/actStrat_userOperatorFragment"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            app:layout_constraintTop_toBottomOf="@+id/actStrat_title"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:id="@+id/actStrat_title"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:textColor="@color/design_default_color_on_primary"/>
+            <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="me.langner.jonas.sodapp.ui.fragment.UserOperatorFragment"
+                    android:id="@+id/actStrat_userOperatorFragment"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    tools:layout="@layout/fragment_user_operator"/>
+            <TextView
+                    android:text="@string/operatoren"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:id="@+id/actStrat_operatorListTitle"/>
+            <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="me.langner.jonas.sodapp.ui.fragment.OperatorFragment"
+                    android:id="@+id/actStrat_operator1"
+                    android:layout_marginTop="@dimen/divider_height" tools:layout="@layout/fragment_operator"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+            <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="me.langner.jonas.sodapp.ui.fragment.OperatorFragment"
+                    android:id="@+id/actStrat_operator2"
+                    android:layout_marginTop="@dimen/divider_height" tools:layout="@layout/fragment_operator"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+            <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="me.langner.jonas.sodapp.ui.fragment.OperatorFragment"
+                    android:id="@+id/actStrat_operator3"
+                    android:layout_marginTop="@dimen/divider_height" tools:layout="@layout/fragment_operator"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+            <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="me.langner.jonas.sodapp.ui.fragment.OperatorFragment"
+                    android:id="@+id/actStrat_operator4"
+                    android:layout_marginTop="@dimen/divider_height" tools:layout="@layout/fragment_operator"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+            <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:name="me.langner.jonas.sodapp.ui.fragment.OperatorFragment"
+                    android:id="@+id/actStrat_operator5"
+                    android:layout_marginTop="@dimen/divider_height" tools:layout="@layout/fragment_operator"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

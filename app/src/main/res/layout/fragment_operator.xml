@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".ui.fragment.OperatorFragment"
+              android:background="@color/cardview_dark_background">
+    <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp" tools:src="@tools:sample/avatars" android:id="@+id/fragOperator_image"
+    />
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" android:id="@+id/fragOperator_name" android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+</LinearLayout>

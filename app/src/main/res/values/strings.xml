@@ -14,4 +14,6 @@
     <string name="image_of_the_map">Image of the map.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="operatoren">Operatoren</string>
+    <string name="dein_operator">Dein Operator</string>
 </resources>
